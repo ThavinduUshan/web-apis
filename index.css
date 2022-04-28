@@ -97,3 +97,7 @@ body {
   color: black;
   border: 2px solid black;
 }
+
+#results {
+  display: none;
+}
