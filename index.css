@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
 }
+
+html,
+body {
+  height: 100%;
+}
+
 .nav-list {
   background-color: rgb(0, 0, 0);
   margin: 0;
@@ -45,4 +51,49 @@
 
 .nav-items a:hover {
   color: blueviolet;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.container form {
+  width: 30%;
+}
+
+.container h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.container label {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.container button {
+  width: 100%;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.container button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
