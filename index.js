@@ -1,4 +1,4 @@
-console.log("page is loading");
+document.getElementById("results").style.display = "none";
 
 function sendRequest() {
   let city = document.getElementById("city").value;
@@ -14,4 +14,20 @@ function sendRequest() {
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
+  const variable = "helloooo";
+  document.getElementById("results").style.display = "block";
+  document.getElementById("results").innerHTML = `<h1>Results</h1>
+      <h2>Location</h2>
+      <p>Town :</p>
+      <p>localtime : ${variable}</p>
+      <h2>Weather</h2>
+      <img src="icon" alt="">
+      <p>Condition</p>
+      <p>Cloud Precentage :</p>
+      <p>C :</p>
+      <p>feels like in C :</p>
+      <p>feels like in F :</p>
+      <p>Humidity :</p>
+      <p>Wind Degree :</p>
+      <p>Wind in kph :</p>`;
 }
