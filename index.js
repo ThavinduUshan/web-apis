@@ -24,7 +24,6 @@ function sendRequest() {
       <img src="icon" alt="">
       <p>Condition</p>
       <p>Cloud Precentage :</p>
-      <p>C :</p>
       <p>feels like in C :</p>
       <p>feels like in F :</p>
       <p>Humidity :</p>
