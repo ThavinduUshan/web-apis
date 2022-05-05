@@ -1,8 +1,11 @@
 //document.getElementById("results").style.display = "none";
 document.getElementById("results").innerHTML = `<h1>Results</h1>
+      <div>      
       <h2>Location</h2>
       <p>Town :</p>
       <p>localtime : </p>
+      </div>
+      <div>
       <h2>Weather</h2>
       <img src="icon" alt="">
       <p>Condition</p>
@@ -11,7 +14,8 @@ document.getElementById("results").innerHTML = `<h1>Results</h1>
       <p>feels like in F :</p>
       <p>Humidity :</p>
       <p>Wind Degree :</p>
-      <p>Wind in kph :</p>`;
+      <p>Wind in kph :</p>
+      </div>`;
 
 function sendRequest() {
   let city = document.getElementById("city").value;

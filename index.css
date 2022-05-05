@@ -99,3 +99,20 @@ body {
   color: black;
   border: 2px solid black;
 }
+
+/* result section */
+
+.result-section {
+  width: 30%;
+  text-align: left;
+}
+
+.result-section h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.result-section p {
+  margin-bottom: 10px;
+}
