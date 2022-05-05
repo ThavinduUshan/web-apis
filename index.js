@@ -1,14 +1,14 @@
 //document.getElementById("results").style.display = "none";
 document.getElementById("results").innerHTML = `<h1>Results</h1>
-      <div>      
+      <div class="location-section">      
       <h2>Location</h2>
       <p>Town :</p>
       <p>localtime : </p>
       </div>
-      <div>
+      <div class="weather-section">
       <h2>Weather</h2>
       <img src="icon" alt="">
-      <p>Condition</p>
+      <p style="font-weight : bold; margin-bottom :30px; margin-top :20px">Condition</p>
       <p>Cloud Precentage :</p>
       <p>feels like in C :</p>
       <p>feels like in F :</p>

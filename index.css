@@ -105,14 +105,19 @@ body {
 .result-section {
   width: 30%;
   text-align: left;
+  margin-bottom: 80px;
 }
 
 .result-section h2 {
-  margin-top: 10px;
   margin-bottom: 20px;
   font-size: 30px;
 }
 
+.location-section {
+  margin-bottom: 30px;
+}
+
 .result-section p {
+  font-size: 20px;
   margin-bottom: 10px;
 }
