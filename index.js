@@ -10,8 +10,8 @@ document.getElementById("results").innerHTML = `<h1>Results</h1>
       <img src="icon" alt="">
       <p style="font-weight : bold; margin-bottom :30px; margin-top :20px">Condition</p>
       <p>Cloud Precentage :</p>
-      <p>feels like in C :</p>
-      <p>feels like in F :</p>
+      <p>Feels like in C :</p>
+      <p>Feels like in F :</p>
       <p>Humidity :</p>
       <p>Wind Degree :</p>
       <p>Wind in kph :</p>
