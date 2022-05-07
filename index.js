@@ -13,7 +13,6 @@ function sendRequest() {
   fetch("https://weatherapi-com.p.rapidapi.com/current.json?q=" + city, options)
     .then((response) => response.json())
     .then((response) => {
-      console.log(response);
       document.getElementById("results").style.display = "block";
       document.getElementById("results").innerHTML = `<h1>Results</h1>
       <div class="location-section">      
