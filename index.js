@@ -12,14 +12,15 @@ function sendRequest() {
 
   fetch("https://weatherapi-com.p.rapidapi.com/current.json?q=" + city, options)
     .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-  document.getElementById("results").style.display = "block";
-  document.getElementById("results").innerHTML = `<h1>Results</h1>
+    .then((response) => {
+      console.log(response);
+      document.getElementById("results").style.display = "block";
+      document.getElementById("results").innerHTML = `<h1>Results</h1>
       <div class="location-section">      
       <h2>Location</h2>
-      <p>Town :</p>
-      <p>localtime : </p>
+      <p>Country : ${response.location.country}</p>
+      <p>Town : ${response.location.name} </p>
+      <p>localtime : ${response.location.localtime} </p>
       </div>
       <div class="weather-section">
       <h2>Weather</h2>
@@ -32,4 +33,6 @@ function sendRequest() {
       <p>Wind Degree :</p>
       <p>Wind in kph :</p>
       </div>`;
+    })
+    .catch((err) => console.error(err));
 }
