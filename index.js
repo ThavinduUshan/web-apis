@@ -24,14 +24,15 @@ function sendRequest() {
       </div>
       <div class="weather-section">
       <h2>Weather</h2>
-      <img src="icon" alt="">
-      <p style="font-weight : bold; margin-bottom :30px; margin-top :20px">Condition</p>
-      <p>Cloud Precentage :</p>
-      <p>Feels like in C :</p>
-      <p>Feels like in F :</p>
-      <p>H  umidity :</p>
-      <p>Wind Degree :</p>
-      <p>Wind in kph :</p>
+      <img src="${response.current.condition.icon}" alt="">
+      <p style="font-weight : bold; margin-bottom :30px; margin-top :20px">${response.current.condition.text}</p>
+      <p>Cloud Precentage : ${response.current.cloud} </p>
+      <p>Feels like in C : ${response.current.feelslike_c} </p>
+      <p>Feels like in F :  ${response.current.feelslike_f}</p>
+      <p>Humidity : ${response.current.humidity}</p>
+      <p>Wind Degree : ${response.current.wind_degree}</p>
+      <p>Wind in kph : ${response.current.wind_kph}</p>
+      <p>Wind in mph : ${response.current.wind_mph}</p>
       </div>`;
     })
     .catch((err) => console.error(err));
