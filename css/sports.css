@@ -1,0 +1,136 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.nav-list {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-items {
+  list-style: none;
+  margin-right: 2rem;
+  color: beige;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-items:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+.nav-btn {
+  font-size: 1rem;
+  background: rgb(165, 117, 210);
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: blueviolet;
+  color: beige;
+}
+
+.nav-items a:hover {
+  color: blueviolet;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.container form {
+  width: 30%;
+}
+
+.container h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.container button {
+  width: 100%;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  margin-top: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.container button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* result section */
+
+.result-section {
+  width: 30%;
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.result-section h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.location-section {
+  margin-bottom: 30px;
+}
+
+.result-section p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.error p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
+}

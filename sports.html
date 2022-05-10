@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/sports.css" />
     <title>Sports API</title>
   </head>
   <body>
@@ -23,5 +23,17 @@
         <li class="nav-items"><a href="sports.html">Sports</a></li>
       </ul>
     </nav>
+    <div class="container">
+      <form>
+        <h1>Sport Events Checker</h1>
+        <p>
+          This plaform help you to find best sport evenets in various sports
+          that are upcoming in the near future
+        </p>
+        <button onclick="sendRequest()" type="button">Find Events</button>
+        <div class="error" id="error"></div>
+      </form>
+      <script src="./js/sports.js"></script>
+    </div>
   </body>
 </html>
