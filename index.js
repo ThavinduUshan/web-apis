@@ -1,4 +1,8 @@
-document.getElementById("results").style.display = "none";
+const results = document.getElementById("results");
+const error = document.getElementById("error");
+
+results.style.display = "none";
+error.style.display = "none";
 
 function sendRequest() {
   let city = document.getElementById("city").value;
@@ -13,8 +17,8 @@ function sendRequest() {
   fetch("https://weatherapi-com.p.rapidapi.com/current.json?q=" + city, options)
     .then((response) => response.json())
     .then((response) => {
-      document.getElementById("results").style.display = "block";
-      document.getElementById("results").innerHTML = `<h1>Results</h1>
+      results.style.display = "block";
+      results.innerHTML = `<h1>Results</h1>
       <div class="location-section">      
       <h2>Location</h2>
       <p>Country : ${response.location.country}</p>
@@ -34,5 +38,9 @@ function sendRequest() {
       <p>Wind in mph : ${response.current.wind_mph}</p>
       </div>`;
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.log(err);
+      error.style.display = "block";
+      error.innerHTML = ``;
+    });
 }
