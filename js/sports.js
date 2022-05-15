@@ -1,3 +1,5 @@
+document.getElementById("error").style.value = "none";
+
 function sendRequest() {
   const options = {
     method: "GET",
@@ -12,6 +14,10 @@ function sendRequest() {
     options
   )
     .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
