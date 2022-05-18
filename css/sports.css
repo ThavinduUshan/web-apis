@@ -118,6 +118,11 @@ body {
   font-size: 30px;
 }
 
+.result-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
 .location-section {
   margin-bottom: 30px;
 }
@@ -134,4 +139,8 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: red;
+}
+
+.cricket-section {
+  margin: 50px 0px;
 }
