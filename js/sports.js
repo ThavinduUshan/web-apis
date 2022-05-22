@@ -17,7 +17,20 @@ function sendRequest() {
     options
   )
     .then((response) => response.json())
-    .then((response) => {})
+    .then((response) => {
+      let cricket = document.getElementById("cricket");
+      let football = document.getElementById("football");
+      let golf = document.getElementById("golf");
+
+      cricket.style.display = "none";
+      football.style.display = "none";
+      golf.style.display = "none";
+      cricket.style.display = "none";
+
+      cricket = cricket.innerHTML = "<h2>Cricket : </h2>";
+      football = football.innerHTML = "<h2>FootBall : </h2>";
+      golf = golf.innerHTML = "<h2>Golf : </h2>";
+    })
     .catch((err) => {
       console.error(err);
     });
