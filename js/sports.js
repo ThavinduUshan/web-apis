@@ -1,4 +1,7 @@
-document.getElementById("error").style.value = "none";
+document.getElementById("error").style.display = "none";
+document.getElementById("cricket").style.display = "none";
+document.getElementById("football").style.display = "none";
+document.getElementById("golf").style.display = "none";
 
 function sendRequest() {
   const options = {
@@ -14,9 +17,7 @@ function sendRequest() {
     options
   )
     .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
-    })
+    .then((response) => {})
     .catch((err) => {
       console.error(err);
     });
