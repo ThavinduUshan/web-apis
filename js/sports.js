@@ -31,7 +31,7 @@ function sendRequest() {
       football = football.innerHTML = "<h2>FootBall : </h2>";
       golf = golf.innerHTML = "<h2>Golf : </h2>";
 
-      //rendering
+      //rendering cricket results
       if (response.cricket.length === 0) {
         cricket.style.display = "none";
       } else {
@@ -45,6 +45,23 @@ function sendRequest() {
           <p>Match : ${response.cricket.stadium}</p>`;
         }
         cricket.innerHTML = str;
+      }
+
+      //rendering football events
+
+      if (response.cricket.length === 0) {
+        cricket.style.display = "none";
+      } else {
+        let str = "";
+        for (let i = 0; i < response.current.length; i++) {
+          str += `<h3>Match ${i}</h3>
+          <p>Stadium : ${response.football.stadium}</p>
+          <p>Country : ${response.football.country}</p>
+          <p>Tournament : ${response.football.stadium}</p>
+          <p>Start : ${response.football.stadium}</p>
+          <p>Match : ${response.football.stadium}</p>`;
+        }
+        football.innerHTML = str;
       }
     })
     .catch((err) => {
