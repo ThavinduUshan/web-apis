@@ -50,7 +50,7 @@ function sendRequest() {
       //rendering football events
 
       if (response.cricket.length === 0) {
-        cricket.style.display = "none";
+        football.style.display = "none";
       } else {
         let str = "";
         for (let i = 0; i < response.current.length; i++) {
@@ -62,6 +62,40 @@ function sendRequest() {
           <p>Match : ${response.football.stadium}</p>`;
         }
         football.innerHTML = str;
+      }
+
+      //rendering golf events
+      //rendering cricket results
+      if (response.cricket.length === 0) {
+        cricket.style.display = "none";
+      } else {
+        let str = "";
+        for (let i = 0; i < response.current.length; i++) {
+          str += `<h3>Match ${i}</h3>
+          <p>Stadium : ${response.cricket.stadium}</p>
+          <p>Country : ${response.cricket.country}</p>
+          <p>Tournament : ${response.cricket.stadium}</p>
+          <p>Start : ${response.cricket.stadium}</p>
+          <p>Match : ${response.cricket.stadium}</p>`;
+        }
+        cricket.innerHTML = str;
+      }
+
+      //rendering football events
+
+      if (response.cricket.length === 0) {
+        golf.style.display = "none";
+      } else {
+        let str = "";
+        for (let i = 0; i < response.current.length; i++) {
+          str += `<h3>Match ${i}</h3>
+          <p>Stadium : ${response.golf.stadium}</p>
+          <p>Country : ${response.golf.country}</p>
+          <p>Tournament : ${response.golf.stadium}</p>
+          <p>Start : ${response.golf.stadium}</p>
+          <p>Match : ${response.golf.stadium}</p>`;
+        }
+        golf.innerHTML = str;
       }
     })
     .catch((err) => {
