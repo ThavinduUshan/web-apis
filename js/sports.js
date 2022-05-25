@@ -30,6 +30,22 @@ function sendRequest() {
       cricket = cricket.innerHTML = "<h2>Cricket : </h2>";
       football = football.innerHTML = "<h2>FootBall : </h2>";
       golf = golf.innerHTML = "<h2>Golf : </h2>";
+
+      //rendering
+      if (response.cricket.length === 0) {
+        cricket.style.display = "none";
+      } else {
+        let str = "";
+        for (let i = 0; i < response.current.length; i++) {
+          str += `<h3>Match ${i}</h3>
+          <p>Stadium : ${response.cricket.stadium}</p>
+          <p>Country : ${response.cricket.country}</p>
+          <p>Tournament : ${response.cricket.stadium}</p>
+          <p>Start : ${response.cricket.stadium}</p>
+          <p>Match : ${response.cricket.stadium}</p>`;
+        }
+        cricket.innerHTML = str;
+      }
     })
     .catch((err) => {
       console.error(err);
