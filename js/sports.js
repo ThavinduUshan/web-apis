@@ -1,3 +1,4 @@
+document.getElementById("result").style.display = "none";
 document.getElementById("error").style.display = "none";
 document.getElementById("cricket").style.display = "none";
 document.getElementById("football").style.display = "none";
@@ -18,14 +19,15 @@ function sendRequest() {
   )
     .then((response) => response.json())
     .then((response) => {
+      console.log(response);
       let cricket = document.getElementById("cricket");
       let football = document.getElementById("football");
       let golf = document.getElementById("golf");
 
-      cricket.style.display = "none";
-      football.style.display = "none";
-      golf.style.display = "none";
-      cricket.style.display = "none";
+      cricket.style.display = "block";
+      football.style.display = "block";
+      golf.style.display = "block";
+      document.getElementById("result").style.display = "block";
 
       cricket = cricket.innerHTML = "<h2>Cricket : </h2>";
       football = football.innerHTML = "<h2>FootBall : </h2>";
@@ -48,7 +50,6 @@ function sendRequest() {
       }
 
       //rendering football events
-
       if (response.cricket.length === 0) {
         football.style.display = "none";
       } else {
@@ -82,7 +83,6 @@ function sendRequest() {
       }
 
       //rendering football events
-
       if (response.cricket.length === 0) {
         golf.style.display = "none";
       } else {
