@@ -1,9 +1,11 @@
+//hiding elements when loading the page
 document.getElementById("result").style.display = "none";
 document.getElementById("error").style.display = "none";
 document.getElementById("cricket").style.display = "none";
 document.getElementById("football").style.display = "none";
 document.getElementById("golf").style.display = "none";
 
+//this function activate when find events button clicked
 function sendRequest() {
   const options = {
     method: "GET",
@@ -19,7 +21,7 @@ function sendRequest() {
   )
     .then((response) => response.json())
     .then((response) => {
-      console.log(response);
+      //displaying the necessary elements
       let cricket = document.getElementById("cricket");
       let football = document.getElementById("football");
       let golf = document.getElementById("golf");
