@@ -29,22 +29,18 @@ function sendRequest() {
       football.style.display = "block";
       golf.style.display = "block";
 
-      cricket = cricket.innerHTML = "";
-      football = football.innerHTML = "<h2>FootBall : </h2>";
-      golf = golf.innerHTML = "<h2>Golf : </h2>";
-
       //rendering cricket results
       if (response.cricket.length === 0) {
         cricket.style.display = "none";
       } else {
         let str = "";
-        for (let i = 0; i < response.current.length; i++) {
+        for (let i = 0; i < response.cricket.length; i++) {
           str += `<h3>Match ${i}</h3>
-          <p>Stadium : ${response.cricket.stadium}</p>
-          <p>Country : ${response.cricket.country}</p>
-          <p>Tournament : ${response.cricket.stadium}</p>
-          <p>Start : ${response.cricket.stadium}</p>
-          <p>Match : ${response.cricket.stadium}</p>`;
+          <p>Stadium : ${response.cricket[i].stadium}</p>
+          <p>Country : ${response.cricket[i].country}</p>
+          <p>Tournament : ${response.cricket[i].tournament}</p>
+          <p>Start : ${response.cricket[i].start}</p>
+          <p>Match : ${response.cricket[i].match}</p>`;
         }
         cricket.innerHTML = "<h2>Cricket : </h2>" + str;
       }
@@ -54,49 +50,34 @@ function sendRequest() {
         football.style.display = "none";
       } else {
         let str = "";
-        for (let i = 0; i < response.current.length; i++) {
+        for (let i = 0; i < response.football.length; i++) {
           str += `<h3>Match ${i}</h3>
-          <p>Stadium : ${response.football.stadium}</p>
-          <p>Country : ${response.football.country}</p>
-          <p>Tournament : ${response.football.stadium}</p>
-          <p>Start : ${response.football.stadium}</p>
-          <p>Match : ${response.football.stadium}</p>`;
+          <p>Stadium : ${response.football[i].stadium}</p>
+          <p>Country : ${response.football[i].country}</p>
+          <p>Tournament : ${response.football[i].stadium}</p>
+          <p>Start : ${response.football[i].stadium}</p>
+          <p>Match : ${response.football[i].stadium}</p>`;
         }
         football.innerHTML = "<h2>Football : </h2>" + str;
       }
 
       //rendering golf events
-      //rendering cricket results
       if (response.golf.length === 0) {
         golf.style.display = "none";
       } else {
         let str = "";
-        for (let i = 0; i < response.current.length; i++) {
+        for (let i = 0; i < response.golf.length; i++) {
           str += `<h3>Match ${i}</h3>
-          <p>Stadium : ${response.golf.stadium}</p>
-          <p>Country : ${response.golf.country}</p>
-          <p>Tournament : ${response.golf.stadium}</p>
-          <p>Start : ${response.golf.stadium}</p>
-          <p>Match : ${response.golf.stadium}</p>`;
+          <p>Stadium : ${response.golf[i].stadium}</p>
+          <p>Country : ${response.golf[i].country}</p>
+          <p>Tournament : ${response.golf[i].tournament}</p>
+          <p>Start : ${response.golf[i].start}</p>
+          <p>Match : ${response.golf[i].match}</p>`;
         }
-        golf.innerHTML = "<h2>Cricket : </h2>" + str;
+        golf.innerHTML = "<h2>Golf : </h2>" + str;
       }
 
-      //rendering football events
-      if (response.cricket.length === 0) {
-        golf.style.display = "none";
-      } else {
-        let str = "";
-        for (let i = 0; i < response.current.length; i++) {
-          str += `<h3>Match ${i}</h3>
-          <p>Stadium : ${response.golf.stadium}</p>
-          <p>Country : ${response.golf.country}</p>
-          <p>Tournament : ${response.golf.stadium}</p>
-          <p>Start : ${response.golf.stadium}</p>
-          <p>Match : ${response.golf.stadium}</p>`;
-        }
-        golf.innerHTML = str;
-      }
+      console.log(response.golf.length);
     })
     .catch((err) => {
       console.error(err);
