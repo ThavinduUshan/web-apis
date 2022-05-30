@@ -38,8 +38,6 @@ function sendRequest() {
     .catch((err) => {
       console.log(err);
       document.getElementById("error").style.display = "block";
-      document.getElementById(
-        "error"
-      ).style.display.innerHTML = `<p>${err}</p>`;
+      document.getElementById("error").innerHTML = `<p>${err}</p>`;
     });
 }
