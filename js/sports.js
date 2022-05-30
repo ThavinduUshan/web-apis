@@ -83,5 +83,8 @@ function sendRequest() {
     })
     .catch((err) => {
       console.error(err);
+      const errEl = document.getElementById("error");
+      errEl.style.display = "block";
+      errEl.innerHTML = `<p>${err}</p>`;
     });
 }
